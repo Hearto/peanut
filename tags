@@ -1,0 +1,257 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALARM_TIME	dc_alarm.c	4;"	d	file:
+CTL_DEVICE	kernel_sock.c	21;"	d	file:
+CTRL_MSG	hb_conn.h	17;"	d
+CTRL_MSG_HEAD	hb_conn.h	14;"	d
+CTRL_MSG_SEND	kernel_sock.h	14;"	d
+DualCtrl_PATH	Makefile	/^DualCtrl_PATH := \/usr\/local\/dualctrl$/;"	m
+HB_CONN_H	hb_conn.h	2;"	d
+HB_DATA	hb_conn.h	13;"	d
+HB_ERR	hb_monitor.h	13;"	d
+HB_MONITOR_H	hb_monitor.h	2;"	d
+HB_MSG	hb_conn.h	16;"	d
+HB_NORMAL	hb_monitor.h	12;"	d
+HB_SERIAL_NAME	hb_conn.h	6;"	d
+HB_STATE	hb_conn.h	/^enum HB_STATE {NORMAL = 0, SEND_ERR,RECV_ERR};$/;"	g
+HB_UCAST_NAME	hb_conn.h	7;"	d
+HLIST_HEAD	list.h	207;"	d
+HLIST_HEAD_INIT	list.h	206;"	d
+INIT_HLIST_HEAD	list.h	208;"	d
+INIT_HLIST_NODE	list.h	209;"	d
+INIT_LIST_HEAD	list.h	25;"	d
+LIST_HEAD	list.h	22;"	d
+LIST_HEAD	lrm.c	/^static LIST_HEAD(rs_list);$/;"	p	file:
+LIST_HEAD_INIT	list.h	20;"	d
+LIST_POISON1	list.h	13;"	d
+LIST_POISON2	list.h	14;"	d
+LOCAL_MSG_HEAD	hb_conn.h	19;"	d
+LRM_ERR	hb_monitor.h	10;"	d
+LRM_H	lrm.h	2;"	d
+LRM_NORMAL	hb_monitor.h	9;"	d
+MAXLINE	lrm.h	7;"	d
+MAXNAME	lrm.h	8;"	d
+MAXPARA	lrm.h	9;"	d
+MAX_HB_MSG	hb_conn.h	15;"	d
+MAX_LINE	hb_conn.c	7;"	d	file:
+MAX_LOCAL_MSG	hb_conn.h	20;"	d
+MAX_MSG_LEN	kernel_sock.h	8;"	d
+MONITOR_INTERVAL	hb_monitor.h	4;"	d
+NORMAL	hb_conn.h	/^enum HB_STATE {NORMAL = 0, SEND_ERR,RECV_ERR};$/;"	e	enum:HB_STATE
+PORT	hb_conn.h	9;"	d
+RECV_ERR	hb_conn.h	/^enum HB_STATE {NORMAL = 0, SEND_ERR,RECV_ERR};$/;"	e	enum:HB_STATE
+RES_IPAddr	lrm.h	18;"	d
+RES_iSCSITarget	lrm.h	19;"	d
+RS_CFG	lrm.h	12;"	d
+RS_DIR	lrm.h	11;"	d
+RS_PATH	lrm.h	21;"	d
+RS_SCRIPT_DIR	lrm.h	14;"	d
+SEND_ERR	hb_conn.h	/^enum HB_STATE {NORMAL = 0, SEND_ERR,RECV_ERR};$/;"	e	enum:HB_STATE
+ST_CFG	hb_conn.h	11;"	d
+ST_DIR	hb_conn.h	10;"	d
+Stop	dc_alarm.c	/^void  Stop(void);$/;"	p	file:	signature:(void)
+Stop	dc_alarm.c	/^void Stop(void) $/;"	f	signature:(void)
+_10G_ERR	hb_monitor.h	8;"	d
+_10G_NORMAL	hb_monitor.h	7;"	d
+_KERNEL_SOCK_H	kernel_sock.h	6;"	d
+_LINUX_LIST_H	list.h	2;"	d
+__hlist_del	list.h	/^static inline void __hlist_del(struct hlist_node *n)$/;"	f	signature:(struct hlist_node *n)
+__list_add	list.h	/^static inline void __list_add(struct list_head *new,$/;"	f	signature:(struct list_head *new, struct list_head *prev, struct list_head *next)
+__list_del	list.h	/^static inline void __list_del(struct list_head * prev, struct list_head * next)$/;"	f	signature:(struct list_head * prev, struct list_head * next)
+__list_for_each	list.h	162;"	d
+__list_splice	list.h	/^static inline void __list_splice(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head)
+addr	ucast.c	/^struct sockaddr_in addr;$/;"	v	typeref:struct:sockaddr_in
+baud	hb_conn.h	/^	int     baud;$/;"	m	struct:hb_setup	access:public
+container_of	list.h	6;"	d
+create_pidfile	main.c	/^void create_pidfile(void)$/;"	f	signature:(void)
+create_pidfile	main.c	/^void create_pidfile(void);$/;"	p	file:	signature:(void)
+ctlfd	kernel_sock.c	/^int ctlfd;$/;"	v
+ctrl_msg_info	kernel_sock.h	/^struct ctrl_msg_info {$/;"	s
+ctrl_msg_info::msg	kernel_sock.h	/^	char msg[MAX_MSG_LEN];$/;"	m	struct:ctrl_msg_info	access:public
+daemon_init	main.c	/^void daemon_init(void)$/;"	f	signature:(void)
+daemon_init	main.c	/^void daemon_init(void);$/;"	p	file:	signature:(void)
+dc_alarm	dc_alarm.c	/^void dc_alarm(void) $/;"	f	signature:(void)
+dolog	log.c	/^static void dolog(int prio, const char *fmt, va_list ap)$/;"	f	file:	signature:(int prio, const char *fmt, va_list ap)
+dualctrl_start	scripts/initd/dualctrld	/^dualctrl_start()$/;"	f
+dualctrl_status	scripts/initd/dualctrld	/^dualctrl_status()$/;"	f
+dualctrl_stop	scripts/initd/dualctrld	/^dualctrl_stop()$/;"	f
+first	list.h	/^struct hlist_node *first;$/;"	m	struct:hlist_head	typeref:struct:hlist_head::hlist_node	access:public
+freq	dc_alarm.c	/^unsigned int freq[]={ 330,392,330,294,330,392, $/;"	v
+freq_alert	dc_alarm.c	/^unsigned int freq_alert[]={ 2000,2400,0 }; $/;"	v
+get_baud	serial.c	/^static int get_baud(int baud)$/;"	f	file:	signature:(int baud)
+get_baud	serial.c	/^static int get_baud(int baud);$/;"	p	file:	signature:(int baud)
+get_cmd_str	lrm.c	/^void  get_cmd_str(struct hb_rsinfo * rs,char * cmd, char * str)$/;"	f	signature:(struct hb_rsinfo * rs,char * cmd, char * str)
+get_cmd_str	lrm.c	/^void get_cmd_str(struct hb_rsinfo * rs,char * cmd,char * str);$/;"	p	file:	signature:(struct hb_rsinfo * rs,char * cmd,char * str)
+get_rs_status	lrm.c	/^int  get_rs_status(struct hb_rsinfo * rs);$/;"	p	file:	signature:(struct hb_rsinfo * rs)
+get_rs_status	lrm.c	/^int get_rs_status(struct hb_rsinfo * rs)$/;"	f	signature:(struct hb_rsinfo * rs)
+hb_conn	hb_monitor.c	/^static void * hb_conn()$/;"	f	file:
+hb_conn	hb_monitor.c	/^static void * hb_conn();$/;"	p	file:
+hb_conn_init	hb_conn.c	/^void hb_conn_init(void)$/;"	f	signature:(void)
+hb_list_init	hb_conn.c	/^void hb_list_init(void)$/;"	f	signature:(void)
+hb_list_init	hb_conn.c	/^void hb_list_init(void);$/;"	p	file:	signature:(void)
+hb_monitor_start	hb_monitor.c	/^void hb_monitor_start(void)$/;"	f	signature:(void)
+hb_monitor_start	hb_monitor.h	/^void  hb_monitor_start(void);$/;"	p	signature:(void)
+hb_recv	hb_monitor.c	/^static void * hb_recv()$/;"	f	file:
+hb_recv	hb_monitor.c	/^static void * hb_recv();$/;"	p	file:
+hb_rsinfo	lrm.h	/^struct hb_rsinfo{$/;"	s
+hb_rsinfo::list	lrm.h	/^	struct list_head list;$/;"	m	struct:hb_rsinfo	typeref:struct:hb_rsinfo::list_head	access:public
+hb_rsinfo::name	lrm.h	/^	char   name[MAXNAME];$/;"	m	struct:hb_rsinfo	access:public
+hb_rsinfo::para	lrm.h	/^	char   para[MAXPARA];$/;"	m	struct:hb_rsinfo	access:public
+hb_rsinfo::status	lrm.h	/^	size_t status;$/;"	m	struct:hb_rsinfo	access:public
+hb_send	hb_monitor.c	/^static void * hb_send()$/;"	f	file:
+hb_send	hb_monitor.c	/^static void * hb_send();$/;"	p	file:
+hb_setup	hb_conn.h	/^struct hb_setup {$/;"	s
+hb_setup::baud	hb_conn.h	/^	int     baud;$/;"	m	struct:hb_setup	access:public
+hb_setup::priv1	hb_conn.h	/^	char  * priv1;$/;"	m	struct:hb_setup	access:public
+hb_setup::priv2	hb_conn.h	/^	char  * priv2;$/;"	m	struct:hb_setup	access:public
+hb_setup::re_send_time	hb_conn.h	/^	int     re_send_time ;$/;"	m	struct:hb_setup	access:public
+hb_setup::send_interval	hb_conn.h	/^	int     send_interval ;$/;"	m	struct:hb_setup	access:public
+hb_setup::serial	hb_conn.h	/^	char  * serial;$/;"	m	struct:hb_setup	access:public
+hb_st	hb_monitor.c	/^struct hb_stinfo * hb_st = NULL;$/;"	v	typeref:struct:hb_stinfo
+hb_stinfo	hb_conn.h	/^struct hb_stinfo{$/;"	s
+hb_stinfo::list	hb_conn.h	/^	struct    list_head list;$/;"	m	struct:hb_stinfo	typeref:struct:hb_stinfo::list_head	access:public
+hb_stinfo::name	hb_conn.h	/^	char *    name;$/;"	m	struct:hb_stinfo	access:public
+hb_stinfo::read_data	hb_conn.h	/^	int       (*read_data)(char *,int);$/;"	m	struct:hb_stinfo	access:public
+hb_stinfo::status	hb_conn.h	/^	enum HB_STATE  status;$/;"	m	struct:hb_stinfo	typeref:enum:hb_stinfo::HB_STATE	access:public
+hb_stinfo::write_ctrlmsg	hb_conn.h	/^	int       (*write_ctrlmsg)(char *);$/;"	m	struct:hb_stinfo	access:public
+hb_stinfo::write_hbmsg	hb_conn.h	/^	int       (*write_hbmsg)();$/;"	m	struct:hb_stinfo	access:public
+hlist_add_after	list.h	/^static inline void hlist_add_after(struct hlist_node *n,$/;"	f	signature:(struct hlist_node *n, struct hlist_node *next)
+hlist_add_before	list.h	/^static inline void hlist_add_before(struct hlist_node *n,$/;"	f	signature:(struct hlist_node *n, struct hlist_node *next)
+hlist_add_head	list.h	/^static inline void hlist_add_head(struct hlist_node *n, struct hlist_head *h)$/;"	f	signature:(struct hlist_node *n, struct hlist_head *h)
+hlist_del	list.h	/^static inline void hlist_del(struct hlist_node *n)$/;"	f	signature:(struct hlist_node *n)
+hlist_del_init	list.h	/^static inline void hlist_del_init(struct hlist_node *n)$/;"	f	signature:(struct hlist_node *n)
+hlist_empty	list.h	/^static inline int hlist_empty(const struct hlist_head *h)$/;"	f	signature:(const struct hlist_head *h)
+hlist_entry	list.h	277;"	d
+hlist_for_each	list.h	279;"	d
+hlist_for_each_entry	list.h	287;"	d
+hlist_for_each_entry_continue	list.h	293;"	d
+hlist_for_each_entry_from	list.h	299;"	d
+hlist_for_each_entry_safe	list.h	304;"	d
+hlist_for_each_safe	list.h	283;"	d
+hlist_head	list.h	/^struct hlist_head {$/;"	s
+hlist_head::first	list.h	/^struct hlist_node *first;$/;"	m	struct:hlist_head	typeref:struct:hlist_head::hlist_node	access:public
+hlist_node	list.h	/^struct hlist_node {$/;"	s
+hlist_node::next	list.h	/^struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::hlist_node	access:public
+hlist_node::pprev	list.h	/^struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::	access:public
+hlist_unhashed	list.h	/^static inline int hlist_unhashed(const struct hlist_node *h)$/;"	f	signature:(const struct hlist_node *h)
+iSCSITarget_DIR	lrm.h	15;"	d
+is_server	main.c	/^int is_server()$/;"	f
+is_server	main.c	/^int is_server(void); $/;"	p	file:	signature:(void)
+kernel_sock_init	kernel_sock.c	/^void kernel_sock_init(void)$/;"	f	signature:(void)
+kernel_sock_init	kernel_sock.h	/^void kernel_sock_init(void);$/;"	p	signature:(void)
+list	hb_conn.h	/^	struct    list_head list;$/;"	m	struct:hb_stinfo	typeref:struct:hb_stinfo::list_head	access:public
+list	lrm.h	/^	struct list_head list;$/;"	m	struct:hb_rsinfo	typeref:struct:hb_rsinfo::list_head	access:public
+list_add	list.h	/^static inline void list_add(struct list_head *new, struct list_head *head)$/;"	f	signature:(struct list_head *new, struct list_head *head)
+list_add_tail	list.h	/^static inline void list_add_tail(struct list_head *new, struct list_head *head)$/;"	f	signature:(struct list_head *new, struct list_head *head)
+list_del	list.h	/^static inline void list_del(struct list_head *entry)$/;"	f	signature:(struct list_head *entry)
+list_del_init	list.h	/^static inline void list_del_init(struct list_head *entry)$/;"	f	signature:(struct list_head *entry)
+list_empty	list.h	/^static inline int list_empty(const struct list_head *head)$/;"	f	signature:(const struct list_head *head)
+list_empty_careful	list.h	/^static inline int list_empty_careful(const struct list_head *head)$/;"	f	signature:(const struct list_head *head)
+list_entry	list.h	155;"	d
+list_for_each	list.h	158;"	d
+list_for_each_entry	list.h	173;"	d
+list_for_each_entry_continue	list.h	186;"	d
+list_for_each_entry_reverse	list.h	178;"	d
+list_for_each_entry_safe	list.h	191;"	d
+list_for_each_prev	list.h	165;"	d
+list_for_each_safe	list.h	169;"	d
+list_head	list.h	/^struct list_head {$/;"	s
+list_head::next	list.h	/^struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head	access:public
+list_head::prev	list.h	/^struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::	access:public
+list_move	list.h	/^static inline void list_move(struct list_head *list, struct list_head *head)$/;"	f	signature:(struct list_head *list, struct list_head *head)
+list_move_tail	list.h	/^static inline void list_move_tail(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head)
+list_p	hb_monitor.c	/^struct list_head * list_p;$/;"	v	typeref:struct:list_head
+list_prepare_entry	list.h	183;"	d
+list_splice	list.h	/^static inline void list_splice(struct list_head *list, struct list_head *head)$/;"	f	signature:(struct list_head *list, struct list_head *head)
+list_splice_init	list.h	/^static inline void list_splice_init(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head)
+log_daemon	log.c	/^int log_daemon = 1;$/;"	v
+log_debug	log.c	/^void log_debug(int level, const char *fmt, ...)$/;"	f	signature:(int level, const char *fmt, ...)
+log_error	log.c	/^void log_error(const char *fmt, ...)$/;"	f	signature:(const char *fmt, ...)
+log_init	log.c	/^void log_init(void)$/;"	f	signature:(void)
+log_level	log.c	/^int log_level = 0;$/;"	v
+log_warning	log.c	/^void log_warning(const char *fmt, ...)$/;"	f	signature:(const char *fmt, ...)
+main	main.c	/^int main(int argc,char **argv)$/;"	f	signature:(int argc,char **argv)
+msg	kernel_sock.h	/^	char msg[MAX_MSG_LEN];$/;"	m	struct:ctrl_msg_info	access:public
+name	hb_conn.h	/^	char *    name;$/;"	m	struct:hb_stinfo	access:public
+name	lrm.h	/^	char   name[MAXNAME];$/;"	m	struct:hb_rsinfo	access:public
+next	list.h	/^struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::hlist_node	access:public
+next	list.h	/^struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head	access:public
+node_num	main.c	/^int node_num = 0; \/* 0: master, 1: slave *\/$/;"	v
+objects	Makefile	/^objects = main.o \\$/;"	m
+offsetof	list.h	4;"	d
+para	lrm.h	/^	char   para[MAXPARA];$/;"	m	struct:hb_rsinfo	access:public
+parse_recv_data	hb_conn.c	/^int parse_recv_data(int len ,char * data)$/;"	f	signature:(int len ,char * data)
+parse_recv_data	hb_conn.c	/^int parse_recv_data(int len ,char * data);$/;"	p	file:	signature:(int len ,char * data)
+pidfile_path	main.c	/^const char * pidfile_path = "\/var\/run\/dualctrl.pid";$/;"	v
+play	dc_alarm.c	/^void  play(unsigned int* freq,unsigned int* delay); $/;"	p	file:	signature:(unsigned int* freq,unsigned int* delay)
+play	dc_alarm.c	/^void play(unsigned int* freq,unsigned int* time) $/;"	f	signature:(unsigned int* freq,unsigned int* time)
+pprev	list.h	/^struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::	access:public
+prefetch	list.h	/^static inline void prefetch(const void *x) {;}$/;"	f	signature:(const void *x)
+prefetchw	list.h	/^static inline void prefetchw(const void *x) {;}$/;"	f	signature:(const void *x)
+prev	list.h	/^struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::	access:public
+print_rs_status	lrm.c	/^void print_rs_status(int lrm_status)$/;"	f	signature:(int lrm_status)
+print_rs_status	lrm.h	/^void print_rs_status(int lrm_status);$/;"	p	signature:(int lrm_status)
+priv1	hb_conn.h	/^	char  * priv1;$/;"	m	struct:hb_setup	access:public
+priv2	hb_conn.h	/^	char  * priv2;$/;"	m	struct:hb_setup	access:public
+re_send_time	hb_conn.h	/^	int     re_send_time ;$/;"	m	struct:hb_setup	access:public
+read_data	hb_conn.h	/^	int       (*read_data)(char *,int);$/;"	m	struct:hb_stinfo	access:public
+resource_monitor	lrm.c	/^int resource_monitor(int no_restart)$/;"	f	signature:(int no_restart)
+resource_monitor	lrm.h	/^int resource_monitor(int no_restart);$/;"	p	signature:(int no_restart)
+resource_parse	lrm.c	/^void resource_parse(char * res,struct hb_rsinfo * rs);$/;"	p	file:	signature:(char * res,struct hb_rsinfo * rs)
+resource_parse	lrm.c	/^void resource_parse(char * res,struct hb_rsinfo *rs)$/;"	f	signature:(char * res,struct hb_rsinfo *rs)
+resource_table_init	lrm.c	/^void resource_table_init(void)$/;"	f	signature:(void)
+resource_table_init	lrm.h	/^void resource_table_init(void); $/;"	p	signature:(void)
+rs_monitor	hb_monitor.c	/^static void * rs_monitor()$/;"	f	file:
+rs_monitor	hb_monitor.c	/^static void * rs_monitor();$/;"	p	file:
+send_interval	hb_conn.h	/^	int     send_interval ;$/;"	m	struct:hb_setup	access:public
+send_kernel_msg	kernel_sock.c	/^int send_kernel_msg(char * msg)$/;"	f	signature:(char * msg)
+send_kernel_msg	kernel_sock.h	/^int send_kernel_msg(char * msg);$/;"	p	signature:(char * msg)
+serial	hb_conn.h	/^	char  * serial;$/;"	m	struct:hb_setup	access:public
+serial_fd	serial.c	/^int serial_fd = 0; $/;"	v
+serial_init	serial.c	/^void serial_init(void)$/;"	f	signature:(void)
+serial_init	serial.c	/^void serial_init(void);$/;"	p	file:	signature:(void)
+serial_read	serial.c	/^int serial_read(char * data ,int data_len)$/;"	f	signature:(char * data ,int data_len)
+serial_read	serial.c	/^int serial_read(char * data,int data_len);$/;"	p	file:	signature:(char * data,int data_len)
+serial_read_data	hb_conn.c	/^int serial_read_data(char * data, int data_len)$/;"	f	signature:(char * data, int data_len)
+serial_read_data	hb_conn.c	/^int serial_read_data(char * data, int data_len);$/;"	p	file:	signature:(char * data, int data_len)
+serial_write	serial.c	/^int serial_write(char * data,int data_len)$/;"	f	signature:(char * data,int data_len)
+serial_write	serial.c	/^int serial_write(char * data,int data_len);$/;"	p	file:	signature:(char * data,int data_len)
+serial_write_ctrlmsg	hb_conn.c	/^int serial_write_ctrlmsg(char * msg)$/;"	f	signature:(char * msg)
+serial_write_ctrlmsg	hb_conn.c	/^int serial_write_ctrlmsg(char * msg);$/;"	p	file:	signature:(char * msg)
+serial_write_hbmsg	hb_conn.c	/^int serial_write_hbmsg(void)$/;"	f	signature:(void)
+serial_write_hbmsg	hb_conn.c	/^int serial_write_hbmsg(void);$/;"	p	file:	signature:(void)
+set_rs_start	lrm.c	/^void set_rs_start(struct hb_rsinfo * rs)$/;"	f	signature:(struct hb_rsinfo * rs)
+set_rs_start	lrm.c	/^void set_rs_start(struct hb_rsinfo * rs);$/;"	p	file:	signature:(struct hb_rsinfo * rs)
+set_rs_stop	lrm.c	/^void set_rs_stop(struct hb_rsinfo * rs)$/;"	f	signature:(struct hb_rsinfo * rs)
+set_rs_stop	lrm.c	/^void set_rs_stop(struct hb_rsinfo * rs);$/;"	p	file:	signature:(struct hb_rsinfo * rs)
+sockfd	ucast.c	/^int sockfd;$/;"	v
+speaker	dc_alarm.c	/^int speaker(unsigned int freq,unsigned int delay) $/;"	f	signature:(unsigned int freq,unsigned int delay)
+st	hb_conn.c	/^struct hb_setup * st;$/;"	v	typeref:struct:hb_setup
+st_list	hb_conn.c	/^LIST_HEAD(st_list);$/;"	v
+st_parse	hb_conn.c	/^void st_parse(char * str)$/;"	f	signature:(char * str)
+st_parse	hb_conn.c	/^void st_parse(char * str);$/;"	p	file:	signature:(char * str)
+status	hb_conn.h	/^	enum HB_STATE  status;$/;"	m	struct:hb_stinfo	typeref:enum:hb_stinfo::HB_STATE	access:public
+status	lrm.h	/^	size_t status;$/;"	m	struct:hb_rsinfo	access:public
+sys_handle	hb_monitor.c	/^void sys_handle(char * msg)$/;"	f	signature:(char * msg)
+sys_handle	hb_monitor.c	/^void sys_handle(char * msg);$/;"	p	file:	signature:(char * msg)
+time	dc_alarm.c	/^unsigned int time[]={ 50 ,50 ,50 ,25 ,25 ,50 , $/;"	v
+time_alert	dc_alarm.c	/^unsigned int time_alert[]={ 50,60 };$/;"	v
+ucast_init	ucast.c	/^void ucast_init(void)$/;"	f	signature:(void)
+ucast_init	ucast.c	/^void ucast_init(void);$/;"	p	file:	signature:(void)
+ucast_read_data	hb_conn.c	/^int ucast_read_data(char * data,int data_len)$/;"	f	signature:(char * data,int data_len)
+ucast_read_data	hb_conn.c	/^int ucast_read_data(char * data,int data_len);$/;"	p	file:	signature:(char * data,int data_len)
+ucast_recv	ucast.c	/^int ucast_recv(char * data ,int data_len)$/;"	f	signature:(char * data ,int data_len)
+ucast_recv	ucast.c	/^int ucast_recv(char * data ,int data_len);$/;"	p	file:	signature:(char * data ,int data_len)
+ucast_send	ucast.c	/^int ucast_send(const char * data,int data_len)$/;"	f	signature:(const char * data,int data_len)
+ucast_send	ucast.c	/^int ucast_send(const char * data,int data_len);$/;"	p	file:	signature:(const char * data,int data_len)
+ucast_write_ctrlmsg	hb_conn.c	/^int ucast_write_ctrlmsg(char * msg)$/;"	f	signature:(char * msg)
+ucast_write_ctrlmsg	hb_conn.c	/^int ucast_write_ctrlmsg(char * msg);$/;"	p	file:	signature:(char * msg)
+ucast_write_hbmsg	hb_conn.c	/^int ucast_write_hbmsg(void)$/;"	f	signature:(void)
+ucast_write_hbmsg	hb_conn.c	/^int ucast_write_hbmsg(void);$/;"	p	file:	signature:(void)
+use_ucast	hb_monitor.c	/^int use_ucast = 0;$/;"	v
+write_ctrlmsg	hb_conn.h	/^	int       (*write_ctrlmsg)(char *);$/;"	m	struct:hb_stinfo	access:public
+write_hbmsg	hb_conn.h	/^	int       (*write_hbmsg)();$/;"	m	struct:hb_stinfo	access:public

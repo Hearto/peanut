@@ -1,0 +1,180 @@
+#!/bin/sh
+
+usage() {
+    echo "usage: $0 <ip-address> <action>"
+    exit 1
+}
+
+if [ $# != 2 ]; then
+    usage
+fi
+
+
+BASEIP=`echo $1 | sed 's%/.*%%'`
+
+str=`echo $1 | sed 's%^'$BASEIP'/*%%'`
+if [ ! -z "$str" ]; then
+    NETMASK=`echo $str | sed 's%/.*%%'`
+    str=`echo $str | sed 's%^'$NETMASK'/*%%'`
+    NIC=`echo $str | sed 's%/.*%%'`
+    IFACE=$NIC
+fi
+
+
+IFCONFIG=ifconfig 
+IFCONFIG_A_OPT="-a"
+
+pingargs() {
+        _baseip=$1
+        _timeout=1      # seconds
+        _pktcount=1
+        _systype="`uname -s`"
+        case $_systype in
+                Linux)
+                        # Default is perpetual ping: need "-c $_pktcount".
+                        # -c count -t timetolive -q(uiet) -n(umeric) -W timeout
+                        _pingargs="-c $_pktcount -q -n $_baseip"
+                        ;;
+                SunOS)
+                        # Default is immediate (or timeout) return.
+                        _pingargs="$_baseip $_timeout"
+                        ;;
+                *)
+                        _pingargs="-c $_pktcount $_baseip"
+                        ;;
+        esac
+
+        echo "$_pingargs"
+}
+
+
+#
+#       Find out which alias serves the given IP address
+#       The argument is an IP address, and its output
+#       is an aliased interface name (e.g., "eth0:0").
+#
+find_interface() {
+    ipaddr="$1"
+    $IFCONFIG $IFCONFIG_A_OPT  |
+    while read ifname linkstuff
+    do
+        : Read gave us ifname = $ifname
+
+        read inet addr junk
+        : Read gave us inet = $inet addr = $addr
+	
+        while
+        read line && [ "X$line" != "X" ]
+        do
+            : Nothing
+        done
+
+        case $ifname in
+	     *)       ;;
+#            *:*)        ;;
+#            *)  continue;;
+        esac
+
+        : "comparing $ipaddr to $addr (from ifconfig)"
+        case $addr in
+            addr:$ipaddr)   echo $ifname; return 0;;
+            $ipaddr)        echo $ifname; return 0;;
+        esac
+     done
+     return 1
+}
+
+ip_status_internal() {
+    NIC=`find_interface $BASEIP`
+    if [ "x$NIC" = x ]; then
+        return 1
+    fi
+
+    case $NIC in
+            lo*) return 1;;
+            *)   return 0;;
+    esac
+}
+
+
+ip_start(){
+	ip_status_internal
+	rc=$?
+	if [ $rc = 0 ]; then
+#		echo "ip_start: already runing"
+		return 1
+	fi
+	CMD="$IFCONFIG $IFACE $BASEIP netmask $NETMASK up"
+#	echo $CMD
+#	$CMD
+	MSG=`$CMD 2>&1`
+	rc=$?
+ 	if [ $rc != 0 ]; then
+#      		echo "ERROR: failed start $NIC "
+		return 2
+  	fi
+	return 0
+}
+
+ip_stop(){
+	ip_status_internal
+	rc=$?
+	if [ $rc != 0 ]; then
+#		echo "ip_stop: already stoped"
+		return 1
+	fi
+	CMD="$IFCONFIG $IFACE down"
+#	echo $CMD
+#	$CMD
+	MSG=`$CMD 2>&1`
+	rc=$?
+ 	if [ $rc != 0 ]; then
+ #     		echo "ERROR: failed stop $NIC"
+		return 2
+  	fi
+	return 0
+}
+
+
+ip_status(){
+	ip_status_internal
+	rc=$?
+#	if [ $rc = 0 ]; then
+#		echo "ip_status: runing"
+#	elif [ $rc = 1 ]; then 
+#		echo "ip_status: stoped"
+#	else
+#		echo "unknown"
+#	fi
+	return $rc;
+}
+
+ip_monitor(){
+	ip_status_internal
+	rc=$?
+	if [ $rc != 0 ]; then
+#		echo "already stoped"
+		return 1
+	fi
+	PINGARGS="`pingargs $BASEIP`"
+  	for j in 1 2 3 4 5 6 7 8 9 10; do
+        MSG=`ping $PINGARGS 2>&1`
+        if [ $? = 0 ]; then
+#	    echo "ping success"
+            return 0
+        fi
+	done
+#	echo "ping failed"
+	return 1
+}
+
+
+case $2 in
+    start)              ip_start;;
+    stop)               ip_stop;;
+    status)             ip_monitor;;
+    monitor)            ip_monitor;;
+esac
+
+exit $?
+

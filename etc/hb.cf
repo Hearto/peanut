@@ -1,0 +1,13 @@
+# priv1 as master ,priv2 as slaver
+priv1          10.17.11.38
+priv2          10.17.11.32
+
+
+serial         /dev/ttyS0
+baud           119200
+
+# if package lost ,re send it
+re_send_time    3
+
+#every interval send a package, unit:s
+send_interval   1
